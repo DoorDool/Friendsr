@@ -29,11 +29,10 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.grid_item, parent, false);
         }
-        ImageView image = convertView.findViewById(position);
+        ImageView image = convertView.findViewById(R.id.imageView3);
         image.setImageResource(friends.get(position).getDrawableId());
-        TextView text = convertView.findViewById(position);
+        TextView text = convertView.findViewById(R.id.textView);
         text.setText(friends.get(position).getName());
-
 
         return convertView;
     }
