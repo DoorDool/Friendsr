@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    tools:padding="12dp">
+    tools:context=".MainActivity">
 
     <GridView
         android:id="@+id/grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="auto_fit"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
-        tools:numColumns="3" />
+        android:backgroundTint="@color/colorAccent"
+        android:numColumns="3"
+        android:padding="5dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true" />
 </LinearLayout>

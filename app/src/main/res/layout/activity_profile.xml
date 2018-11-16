@@ -5,30 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".ProfileActivity"
-    tools:layout_weight="1"
-    tools:padding="35dp">
+    tools:layout_weight="1">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="345dp"
+        android:layout_width="275dp"
+        android:layout_height="205dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
+        android:background="#008577"
         android:cropToPadding="true"
+        android:padding="7dp"
         android:scaleType="centerCrop"
-        app:srcCompat="@null"
-        tools:padding="12dp" />
+        app:srcCompat="@null" />
 
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="258dp"
+        android:layout_height="29dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:numStars="5"
+        android:padding="12dp"
         android:rating="0"
-        android:theme="@style/RatingBar"/>
+        android:theme="@style/RatingBar" />
 
     <TextView
         android:id="@+id/textView2"

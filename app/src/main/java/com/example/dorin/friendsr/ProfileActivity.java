@@ -29,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
         image.setImageResource(retrievedFriend.getDrawableId());
         // set text
         TextView text = findViewById(R.id.textView2);
-        text.setText(retrievedFriend.getName() + "\n" + retrievedFriend.getBio());
+        text.setText(retrievedFriend.getName() + "\n" + "\n" + retrievedFriend.getBio());
 
         // set rating of friend
         rating = findViewById(R.id.ratingBar);
