@@ -14,18 +14,16 @@ public class Friend implements Serializable {
         drawableId = aDrawableId;
     }
 
+    // getters and setter
     public String getName() {
         return name;
     }
-
     public String getBio() {
         return bio;
     }
-
     public Integer getDrawableId() {
         return drawableId;
     }
-
     public void setRating(float rating) {
         this.rating = rating;
     }

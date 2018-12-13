@@ -13,11 +13,12 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Friend> friends = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // put example friends in ArrayList
         Integer IDdrawDonald = getResources().getIdentifier("donaldduck", "drawable",getPackageName());
         Integer IDdrawPaddington = getResources().getIdentifier("beertjepaddington", "drawable",getPackageName());
         Integer IDdrawDiddle = getResources().getIdentifier("diddle", "drawable",getPackageName());
@@ -61,23 +62,26 @@ public class MainActivity extends AppCompatActivity {
         friends.add(Goofy);
         friends.add(Kuifje);
 
+        // set adapter on grid
         FriendsAdapter adapter = new FriendsAdapter(this, R.layout.grid_item, friends);
         GridView grid = findViewById(R.id.grid);
         grid.setAdapter(adapter);
 
+        // method for on item in grid clicked
         grid.setOnItemClickListener(new GridItemClickListener());
     }
 
+    // method item clicked
     private class GridItemClickListener implements AdapterView.OnItemClickListener {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            // save clicked friend in variable
             Friend clickedFriend = (Friend) parent.getItemAtPosition(position);
-
+            // go to ProfileActivity of clickedFriend
             Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra("clicked_friend", clickedFriend);
             startActivity(intent);
-
         }
     }
 

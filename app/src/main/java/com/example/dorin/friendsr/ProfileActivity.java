@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -28,18 +27,18 @@ public class ProfileActivity extends AppCompatActivity {
         // set image
         image.setImageResource(retrievedFriend.getDrawableId());
         // set text
-        TextView text = findViewById(R.id.textView2);
+        TextView text = findViewById(R.id.textView);
         text.setText(retrievedFriend.getName() + "\n" + "\n" + retrievedFriend.getBio());
 
         // set rating of friend
         rating = findViewById(R.id.ratingBar);
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
         editor = prefs.edit();
-        // get float of ratingbar
+        // get float of ratingBar
         float ratingFloat = prefs.getFloat(retrievedFriend.getName(), (float) 0.0);
         rating.setRating(ratingFloat);
 
-        // if click on ratingbar
+        // if click on ratingBar new ratingFloat
         rating.setOnRatingBarChangeListener(new RatingBarChangeListener());
     }
 
@@ -49,10 +48,8 @@ public class ProfileActivity extends AppCompatActivity {
         public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
 
             SharedPreferences.Editor editor = getSharedPreferences("settings", MODE_PRIVATE).edit();
-
             // save float
             editor.putFloat(retrievedFriend.getName(), v);
-            Log.i("string", "yesss");
             editor.apply();
             // set rating
             retrievedFriend.setRating(v);

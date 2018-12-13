@@ -9,10 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
-import java.util.List;
-
 
 public class FriendsAdapter extends ArrayAdapter<Friend> {
 
@@ -29,9 +26,11 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.grid_item, parent, false);
         }
-        ImageView image = convertView.findViewById(R.id.imageView3);
+        ImageView image = convertView.findViewById(R.id.imageView);
+        // get DrawableId of friend and put in imageView
         image.setImageResource(friends.get(position).getDrawableId());
         TextView text = convertView.findViewById(R.id.textView);
+        // get name of friend and put in textView
         text.setText(friends.get(position).getName());
 
         return convertView;
