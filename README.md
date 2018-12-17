@@ -13,7 +13,4 @@ You can always set the ratingbar.
 
 The pictogram of the app is like this:
 
-<img src="https://github.com/DoorDool/mr-potatohead/blob/master/app/src/main/res/drawable/picto_screen.png" width="250">
-                                                                                                                 
-                                                                                                                 
-
+![layout](app/src/main/res/drawable/picto_screen.png)
